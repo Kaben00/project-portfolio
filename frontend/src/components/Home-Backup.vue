@@ -1,7 +1,7 @@
 <template>
   <v-container class="fill-height">
     <v-responsive
-      class="align-centerfill-height mx-auto"
+      class="align-centerfill-height mx-auto hero-image"
       max-width="900"
     >
       <v-img
@@ -155,3 +155,9 @@
 <script setup>
   //
 </script>
+
+<style scoped>
+.v-application {
+  background: url('./assets/images/hero-background-image.jpg') !important;
+}
+</style>

@@ -1,5 +1,5 @@
 <template>
-  <v-footer height="40" app>
+  <v-footer height="40" app class="footer-container">
     <a
       v-for="item in items"
       :key="item.title"
@@ -19,16 +19,7 @@
       class="text-caption text-disabled"
       style="position: absolute; right: 16px;"
     >
-      &copy; 2016-{{ (new Date()).getFullYear() }} <span class="d-none d-sm-inline-block">Vuetify, LLC</span>
-      —
-      <a
-        class="text-decoration-none on-surface"
-        href="https://vuetifyjs.com/about/licensing/"
-        rel="noopener noreferrer"
-        target="_blank"
-      >
-        MIT License
-      </a>
+      {{ (new Date()).getFullYear() }} - <span class="d-none d-sm-inline-block">A Website by Kah Beng</span>
     </div>
   </v-footer>
 </template>
@@ -76,4 +67,10 @@
 
     &:hover
       color: rgba(25, 118, 210, 1)
+</style>
+
+<style scoped>
+    .footer-container {
+    position: relative !important;
+  }
 </style>

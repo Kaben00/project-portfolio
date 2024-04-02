@@ -1,13 +1,42 @@
 <template>
   <v-app>
-    <v-main>
-      <HelloWorld />
-    </v-main>
+    <nav-menu/>
+    <section class="home-section" id="home">
+      <Home />
+    </section >
+    <section class="about-me-section" id="about">
+      <about-me/>
+    </section >
+    <section class="resume-section">
+      <resume/>
+    </section >
+    <section class="portfolio-section">
+      <portfolio/>
+    </section >
+    <section class="contact-section" id="contact">
+      <contact/>
+    </section >
+    <section>
+      <Footer/>
+    </section>
 
-    <AppFooter />
   </v-app>
 </template>
 
 <script setup>
   //
 </script>
+
+<style scoped>
+.home-section {
+  background: url('./assets/images/hero-background-image.jpg') !important;
+  background-repeat: no-repeat;
+  background-size: cover !important;
+  height: 100vh;
+}
+
+.about-me-section, .resume-section, .portfolio-section, .contact-section {
+  height: 100vh;
+  background-color: white;
+}
+</style>

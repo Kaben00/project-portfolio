@@ -1,0 +1,6 @@
+/*CSS Styles for Global*/
+.v-navigation-drawer__content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
