@@ -4,3 +4,11 @@
     justify-content: center;
     flex-direction: column;
   }
+
+  .section-title, .section-description {
+    text-align: center;
+  }
+
+  .homepage {
+    margin-left: 100px;
+  }

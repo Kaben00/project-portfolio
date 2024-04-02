@@ -3,8 +3,8 @@
     <v-row justify="center">
       <v-col cols="12" md="8">
         <div class="about-us-description">
-          <div class="text-h2">Resume</div>
-          <p class="text-body-1">A professional frontend developer.</p>
+          <div class="text-h2 section-title">Resume</div>
+          <p class="text-body-1 section-description">A professional frontend developer.</p>
         </div>
       </v-col>
     </v-row>
