@@ -1,5 +1,6 @@
 <template>
-    <v-tabs v-model="selectedCategory" background-color="transparent">
+  <v-container>
+    <v-tabs v-model="selectedCategory" background-color="transparent" class="portolio-tab">
       <v-tab v-for="category in categories" :key="category" :value="category">
         {{ category }}
       </v-tab>
@@ -22,6 +23,7 @@
         </v-card>
       </v-col>
     </v-row>
+  </v-container>
 </template>
 
 <script>
@@ -30,10 +32,10 @@
             categories: ['All', 'WordPress', 'Vue', 'SiteSell'],
             selectedCategory: 'All',
             portfolioItems: [
-        { id: 1, title: 'TaxPOD Website', description: 'Brief description of Project 1', imageUrl: 'path/to/image1.jpg', category: 'WordPress' },
-        { id: 2, title: 'YYC & Co Website', description: 'Brief description of Project 2', imageUrl: 'path/to/image2.jpg', category: 'WordPress' },
-        { id: 3, title: 'YYC Advisors', description: 'Brief description of Project 2', imageUrl: 'path/to/image2.jpg', category: 'SiteSell' },
-        { id: 2, title: 'Kah Beng Portfolio Website', description: 'Brief description of Project 2', imageUrl: 'path/to/image2.jpg', category: 'Vue' },
+        { id: 1, title: 'TaxPOD Website', description: 'Revamp TaxPOD Website', imageUrl: '@/assets/images/taxpod-homepage-portfolio.webp', category: 'WordPress' },
+        { id: 2, title: 'YYC & Co Website', description: 'Revamp YYC & Co Website', imageUrl: 'path/to/image2.jpg', category: 'WordPress' },
+        { id: 3, title: 'YYC Advisors', description: 'In Charge of YYC Advisors Project', imageUrl: 'path/to/image2.jpg', category: 'SiteSell' },
+        { id: 2, title: 'Kah Beng Portfolio Website', description: 'Create a Website to Combine All Protfolio', imageUrl: 'path/to/image2.jpg', category: 'Vue' },
       ],
         }),
 
@@ -77,5 +79,9 @@
 
     .v-btn {
         color: #1976D2;
+    }
+
+    .portolio-tab {
+      margin-bottom: 30px;
     }
 </style>

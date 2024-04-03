@@ -7,8 +7,13 @@
 
   .section-title, .section-description {
     text-align: center;
+    padding-bottom: 30px;
   }
 
   .homepage {
     margin-left: 100px;
+  }
+
+  .v-slide-group__content {
+    justify-content: center;
   }
