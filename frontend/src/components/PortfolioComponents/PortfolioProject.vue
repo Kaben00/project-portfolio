@@ -35,7 +35,7 @@
         { id: 1, title: 'TaxPOD Website', description: 'Revamp TaxPOD Website', imageUrl: '@/assets/images/taxpod-homepage-portfolio.webp', category: 'WordPress' },
         { id: 2, title: 'YYC & Co Website', description: 'Revamp YYC & Co Website', imageUrl: 'path/to/image2.jpg', category: 'WordPress' },
         { id: 3, title: 'YYC Advisors', description: 'In Charge of YYC Advisors Project', imageUrl: 'path/to/image2.jpg', category: 'SiteSell' },
-        { id: 2, title: 'Kah Beng Portfolio Website', description: 'Create a Website to Combine All Protfolio', imageUrl: 'path/to/image2.jpg', category: 'Vue' },
+        { id: 2, title: 'Portfolio Website', description: 'Create a Website to Combine All Protfolio', imageUrl: 'path/to/image2.jpg', category: 'Vue' },
       ],
         }),
 
