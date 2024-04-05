@@ -27,15 +27,40 @@
 </template>
 
 <script>
+    //import FileLocation from {"http://localhost:3000/src/assets"};
     export default {
         data : () => ({
             categories: ['All', 'WordPress', 'Vue', 'SiteSell'],
             selectedCategory: 'All',
             portfolioItems: [
-        { id: 1, title: 'TaxPOD Website', description: 'Revamp TaxPOD Website', imageUrl: '@/assets/images/taxpod-homepage-portfolio.webp', category: 'WordPress' },
-        { id: 2, title: 'YYC & Co Website', description: 'Revamp YYC & Co Website', imageUrl: 'path/to/image2.jpg', category: 'WordPress' },
-        { id: 3, title: 'YYC Advisors', description: 'In Charge of YYC Advisors Project', imageUrl: 'path/to/image2.jpg', category: 'SiteSell' },
-        { id: 2, title: 'Portfolio Website', description: 'Create a Website to Combine All Protfolio', imageUrl: 'path/to/image2.jpg', category: 'Vue' },
+        { 
+          id: 1, 
+          title: 'TaxPOD Website', 
+          description: 'Revamp TaxPOD Website', 
+          imageUrl: '/src/assets/images/taxpod-homepage-portfolio.webp', 
+          category: 'WordPress' 
+        },
+        { 
+          id: 2, 
+          title: 'YYC & Co Website', 
+          description: 'Revamp YYC & Co Website', 
+          imageUrl: '/src/assets/images/yyc-co-homepage-portfolio.webp', 
+          category: 'WordPress' 
+        },
+        { 
+          id: 3, 
+          title: 'YYC Advisors', 
+          description: 'In Charge of YYC Advisors Project', 
+          imageUrl: '/src/assets/images/yyc-advisors-homepage-portfolio.webp', 
+          category: 'SiteSell' 
+        },
+        { 
+          id: 2, 
+          title: 'Portfolio Website', 
+          description: 'Create a Website to Combine All Protfolio', 
+          imageUrl: '/src/assets/images/taxpod-homepage-portfolio.webp', 
+          category: 'Vue' 
+        },
       ],
         }),
 
