@@ -1,34 +1,43 @@
 <template>
   <v-container>
-    <v-tabs v-model="selectedCategory" background-color="transparent" class="portolio-tab">
-      <v-tab v-for="category in categories" :key="category" :value="category">
-        {{ category }}
-      </v-tab>
-    </v-tabs>
-    <v-row>
-      <v-col
-        cols="12"
-        md="6"
-        lg="4"
-        v-for="item in filteredPortfolioItems"
-        :key="item.id"
-      >
-        <v-card>
-          <v-img :src="item.imageUrl" height="200px"></v-img>
-          <v-card-title>{{ item.title }}</v-card-title>
-          <v-card-text>{{ item.description }}</v-card-text>
-          <v-card-actions>
-            <v-btn text :href="`#details-${item.id}`">Learn More</v-btn>
-          </v-card-actions>
-        </v-card>
-      </v-col>
-    </v-row>
+    <div v-if="!showDetail">
+      <v-tabs v-model="selectedCategory" background-color="transparent" class="portolio-tab">
+        <v-tab v-for="category in categories" :key="category" :value="category">
+          {{ category }}
+        </v-tab>
+      </v-tabs>
+      <v-row>
+        <v-col
+          cols="12"
+          md="6"
+          lg="4"
+          v-for="item in filteredPortfolioItems"
+          :key="item.id"
+        >
+          <v-card @click="openDetail(item)">
+            <v-img :src="item.imageUrl" height="200px"></v-img>
+            <v-card-title>{{ item.title }}</v-card-title>
+            <v-card-text>{{ item.description }}</v-card-text>
+            <v-card-actions>
+              <v-btn text :href="`#details-${item.id}`">Learn More</v-btn>
+            </v-card-actions>
+          </v-card>
+        </v-col>
+      </v-row>
+    </div>
+    <div v-else>
+      <portfolio-detail :detail="selectedItem" @closeDetail="closeDetail"/>
+    </div>
   </v-container>
 </template>
 
 <script>
-    //import FileLocation from {"http://localhost:3000/src/assets"};
+    import PortfolioDetail from './PortfolioDetail.vue';
     export default {
+      components: {
+        PortfolioDetail,
+      },
+
         data : () => ({
             categories: ['All', 'WordPress', 'Vue', 'SiteSell'],
             selectedCategory: 'All',
@@ -62,6 +71,8 @@
           category: 'Vue' 
         },
       ],
+      showDetail: false,
+      selectedItem: null,
         }),
 
         mounted() {
@@ -78,7 +89,15 @@
         },
 
         methods : {
+          openDetail(item) {
+            this.selectedItem = item;
+            this.showDetail = true;
         },
+          closeDetail() {
+            this.showDetail = false;
+            this.selectedItem = null;
+        }
+      },
     }
 </script>
 
