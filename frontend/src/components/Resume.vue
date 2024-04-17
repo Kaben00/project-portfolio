@@ -3,7 +3,7 @@
     <v-row justify="center">
       <v-col cols="12" md="8">
         <div class="about-us-description">
-          <div class="text-h2 section-title">Resume</div>
+          <div class="text-h2 section-title">RESUME</div>
           <p class="text-body-1 section-description">A professional frontend developer.</p>
         </div>
       </v-col>
@@ -12,9 +12,7 @@
 </template>
 
 <script>
-import HomeJobScope from './HomeComponents/HomeJobScope.vue';
 export default {
-  components: { HomeJobScope },
   data: () => ({
   }),
 
