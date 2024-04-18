@@ -2,19 +2,19 @@
   <v-container class="fill-height">
     <v-row justify="center">
       <v-col cols="12" md="8">
-        <div class="about-us-description">
+        <div class="about-us">
           <div class="text-h2 about-title">ABOUT</div>
-          <p class="text-body-1 about-description" v-for="(description, index) in descriptions" :key="index">
-            {{ description }}
-          </p>
-        </div>
-        <div class="about-us-details" v-for="(item, index) in aboutUsItems" :key="index">
-          <div class="about-us-image-container">
-            <v-avatar size="350">
-              <v-img :src="item.aboutUsImageUrl" height="400px"></v-img>
-            </v-avatar>
-          </div>
-            <div class="text-content">
+          <div class="about-us-description">
+            <div class="about-us-image-container" v-for="(item, index) in aboutUsItems" :key="index">
+              <v-avatar size="350"  rounded="0">
+                <v-img :src="item.aboutUsImageUrl" height="400px"></v-img>
+              </v-avatar>
+            </div>
+            <div>
+              <p class="text-body-1 about-description" v-for="(description, index) in descriptions" :key="index">
+                {{ description }}
+              </p>
+              <div class="text-content" v-for="(item, index) in aboutUsItems" :key="index">
               <div class="about-us-information">
                 <h3>{{ item.aboutUsJobTitle }}</h3>
                 <p v-for="(value, key) in item.aboutUsDetails" :key="`detail-${key}-${index}`">
@@ -22,6 +22,9 @@
                 </p>
               </div>
             </div>
+          </div>
+            
+          </div>
         </div>
       </v-col>
     </v-row>
@@ -66,15 +69,22 @@ export default {
 </script>
 
 <style scoped>
-  .about-us-description {
+  .about-us {
     color: black;
   }
 
-  .about-title, .about-description {
+  .about-us-description {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  .about-title {
     text-align: center;
   }
 
   .about-description {
+    text-align: left;
     margin-bottom: 16px;
   }
 
