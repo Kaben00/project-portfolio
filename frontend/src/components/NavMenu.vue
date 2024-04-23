@@ -1,19 +1,31 @@
 <template>
  <v-navigation-drawer app permanent class="nav-menu">
     <v-list dense>
-        <v-list-item link href="#home" class="nav-item">
+        <v-list-item @click.prevent="scrollToSection('#home')" class="nav-item">
           <v-list-item-content class="nav-content">
             <v-icon class="nav-icon">mdi-home</v-icon>
             <v-list-item-title class="nav-title">Home</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
-        <v-list-item link href="#about" class="nav-item">
+        <v-list-item @click.prevent="scrollToSection('#about')" class="nav-item">
           <v-list-item-content class="nav-content">
             <v-icon class="nav-icon">mdi-account</v-icon>
             <v-list-item-title class="nav-title">About</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
-        <v-list-item link href="#contact" class="nav-item">
+        <v-list-item @click.prevent="scrollToSection('#resume')" class="nav-item">
+          <v-list-item-content class="nav-content">
+            <v-icon class="nav-icon">mdi-account</v-icon>
+            <v-list-item-title class="nav-title">Resume</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+        <v-list-item @click.prevent="scrollToSection('#portfolio')" class="nav-item">
+          <v-list-item-content class="nav-content">
+            <v-icon class="nav-icon">mdi-account</v-icon>
+            <v-list-item-title class="nav-title">Portfolio</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+        <v-list-item @click.prevent="scrollToSection('#contact')" class="nav-item">
           <v-list-item-content class="nav-content">
             <v-icon class="nav-icon">mdi-email</v-icon>
             <v-list-item-title class="nav-title">Contact</v-list-item-title>
@@ -32,14 +44,10 @@ export default {
   },
 
   methods: {
-    scrollToSection(event) {
-      const hash = event.currentTarget.hash;
-      if (hash) {
-        event.preventDefault();
-        const section = document.querySelector(hash);
-        if (section) {
-          section.scrollIntoView({ behavior: 'smooth' });
-        }
+    scrollToSection(selector) {
+      const section = document.querySelector(selector);
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
       }
     },
     

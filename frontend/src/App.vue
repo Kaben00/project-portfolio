@@ -7,10 +7,10 @@
     <section class="about-me-section" id="about">
       <about-me/>
     </section >
-    <section class="resume-section">
+    <section class="resume-section" id="resume">
       <resume/>
     </section >
-    <section class="portfolio-section">
+    <section class="portfolio-section" id="portfolio">
       <portfolio/>
     </section >
     <section class="contact-section" id="contact">

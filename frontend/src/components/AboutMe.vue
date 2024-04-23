@@ -3,15 +3,15 @@
     <v-row justify="center">
       <v-col cols="12" md="8">
         <div class="about-us">
-          <div class="text-h2 about-title">ABOUT</div>
+          <div class="section-h2-title">ABOUT</div>
           <div class="about-us-description">
             <div class="about-us-image-container" v-for="(item, index) in aboutUsItems" :key="index">
-              <v-avatar size="350"  rounded="0">
-                <v-img :src="item.aboutUsImageUrl" height="400px"></v-img>
+              <v-avatar size="400"  rounded="0">
+                <v-img :src="item.aboutUsImageUrl"></v-img>
               </v-avatar>
             </div>
             <div>
-              <p class="text-body-1 about-description" v-for="(description, index) in descriptions" :key="index">
+              <p v-for="(description, index) in descriptions" :key="index">
                 {{ description }}
               </p>
               <div class="text-content" v-for="(item, index) in aboutUsItems" :key="index">
@@ -81,6 +81,7 @@ export default {
 
   .about-title {
     text-align: center;
+    margin-bottom: 30px;
   }
 
   .about-description {

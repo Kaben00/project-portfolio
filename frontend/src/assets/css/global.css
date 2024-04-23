@@ -1,5 +1,10 @@
 /*CSS Styles for Global*/
-.v-navigation-drawer__content {
+  p {
+    margin-bottom: 16px;
+    font-family: "Open Sans", sans-serif;
+  }
+  
+  .v-navigation-drawer__content {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -16,4 +21,59 @@
 
   .v-slide-group__content {
     justify-content: center;
+  }
+
+  .col-item-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  .row {
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+  }
+
+  .h3-title {
+    font-size: 26px;
+    font-weight: 700;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-top: 40px;
+    color: #45505b;
+  }
+
+  .section-h2-title {
+    font-size: 32px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+    padding-bottom: 20px;
+    position: relative;
+    color: #45505b;
+    text-align: center;
+  }
+
+  .section-h2-title:before {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 120px;
+    height: 1px;
+    background: #ddd;
+    bottom: 1px;
+    left: calc(50% - 60px);
+  }
+
+  .section-h2-title::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: #0563bb;
+    bottom: 0;
+    left: calc(50% - 20px);
   }
