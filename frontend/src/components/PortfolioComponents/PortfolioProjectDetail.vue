@@ -1,7 +1,7 @@
 <template>
   <v-container>
     <v-card-actions>
-      <v-btn text @click="$emit('closeDetail')">Back</v-btn>
+      <v-btn class="ma-2" color="primary" text @click="$emit('closeDetail')"><v-icon icon="mdi-arrow-left" start></v-icon>Back</v-btn>
     </v-card-actions>
     <div class="detailed-section">
       <div class="image-container">
@@ -13,8 +13,7 @@
         <div class="detailed-date-tasks" v-for="(detailEntry, index) in detail.details" :key="index">
           <h3>Date: {{ detailEntry.date }}</h3>
           <ul>
-            <li v-for="(task, taskIndex) in detailEntry.tasks" :key="taskIndex">
-              {{ task }}
+            <li v-for="(task, taskIndex) in detailEntry.tasks" :key="taskIndex" v-html="task">
             </li>
           </ul>
         </div>

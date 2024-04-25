@@ -4,6 +4,12 @@
     font-family: "Open Sans", sans-serif;
   }
   
+  h4 {
+    line-height: 18px;
+    font-size: 18px;
+    font-weight: 600;
+  }
+  
   .v-navigation-drawer__content {
     display: flex;
     justify-content: center;

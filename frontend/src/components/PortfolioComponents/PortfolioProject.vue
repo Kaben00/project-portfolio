@@ -167,6 +167,12 @@
                 'Updated page with new design and information.'
               ],
             },
+            {
+              date: '2024-04-24',            
+              tasks: [
+                'Redesigned Articles page, <a href="https://www.yycadvisors.com/accounting-new-design.html" target="_blank">link</a>',
+              ],
+            },
           ]
         },
         { 
@@ -244,10 +250,6 @@
 
     .portfolio-background:hover {
       background: rgba(255, 255, 255, 0.8);
-    }
-
-    .v-card-title, .v-card-text, .v-icon, .v-btn {
-      display: none;
     }
 
     .info-overlay .hover-details {

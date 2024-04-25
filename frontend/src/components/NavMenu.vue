@@ -1,36 +1,17 @@
 <template>
  <v-navigation-drawer app permanent class="nav-menu">
     <v-list dense>
-        <v-list-item @click.prevent="scrollToSection('#home')" class="nav-item">
+      <v-list-item 
+        v-for="item in menuItems"
+        :key="item.id"
+        @click.prevent="scrollToSection('#' + item.id)"
+        :class="{'nav-item': true, 'active': activeSection === item.id}"
+        link>
           <v-list-item-content class="nav-content">
-            <v-icon class="nav-icon">mdi-home</v-icon>
-            <v-list-item-title class="nav-title">Home</v-list-item-title>
+            <v-icon class="nav-icon">{{ item.icon }}</v-icon>
+            <v-list-item-title class="nav-title">{{ item.title }}</v-list-item-title>
           </v-list-item-content>
-        </v-list-item>
-        <v-list-item @click.prevent="scrollToSection('#about')" class="nav-item">
-          <v-list-item-content class="nav-content">
-            <v-icon class="nav-icon">mdi-account</v-icon>
-            <v-list-item-title class="nav-title">About</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
-        <v-list-item @click.prevent="scrollToSection('#resume')" class="nav-item">
-          <v-list-item-content class="nav-content">
-            <v-icon class="nav-icon">mdi-account</v-icon>
-            <v-list-item-title class="nav-title">Resume</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
-        <v-list-item @click.prevent="scrollToSection('#portfolio')" class="nav-item">
-          <v-list-item-content class="nav-content">
-            <v-icon class="nav-icon">mdi-account</v-icon>
-            <v-list-item-title class="nav-title">Portfolio</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
-        <v-list-item @click.prevent="scrollToSection('#contact')" class="nav-item">
-          <v-list-item-content class="nav-content">
-            <v-icon class="nav-icon">mdi-email</v-icon>
-            <v-list-item-title class="nav-title">Contact</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
+      </v-list-item>
       </v-list>
   </v-navigation-drawer>
 </template>
@@ -38,9 +19,33 @@
 <script>
 export default {
   data: () => ({
+    activeSection: '',
+    menuItems: [
+    { id: 'home', title: 'Home', icon: 'mdi-home' },
+    { id: 'about', title: 'About', icon: 'mdi-account' },
+    { id: 'resume', title: 'Resume', icon: 'mdi-briefcase' },
+    { id: 'portfolio', title: 'Portfolio', icon: 'mdi-image' },
+    { id: 'contact', title: 'Contact', icon: 'mdi-email' }
+  ],
   }),
 
   mounted() {
+      const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        this.activeSection = entry.target.id;
+      }
+    });
+  }, { threshold: 0.3 });
+
+  this.menuItems.forEach(item => {
+    const el = document.getElementById(item.id);
+    if (el) observer.observe(el);
+  });
+  },
+
+  beforeDestroy() {
+    observer.disconnect();
   },
 
   methods: {
@@ -51,8 +56,25 @@ export default {
       }
     },
     
-    hoverOverToShowTabName() {
+    handleScroll() {
+      const sections = ['home', 'about', 'resume', 'portfolio', 'contact'];
+      const offsets = sections.map(id => {
+        const el = document.getElementById(id);
+        return el ? el.getBoundingClientRect().top + window.scrollY : null;
+      });
 
+      const currentPosition = window.scrollY + window.innerHeight / 2; // Middle of the viewport
+      let closestSection = '';
+      let smallestDiff = Infinity;
+
+      offsets.forEach((offset, index) => {
+        if (offset !== null && Math.abs(currentPosition - offset) < smallestDiff) {
+          smallestDiff = Math.abs(currentPosition - offset);
+          closestSection = sections[index];
+        }
+      });
+
+      this.activeSection = closestSection;
     },
   },
 };
@@ -78,25 +100,36 @@ export default {
   white-space: nowrap;
 }
 
-.nav-content {
+.nav-item .nav-content {
   border-radius: 50%;
-  background-color: #0563bb;
+  background-color: #f2f3f5;
   width: 50px;
   height: 50px;
   margin-bottom: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: width 0.3s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  color: black;
   overflow: hidden;
 }
 
 .nav-item:hover .nav-content {
+  background-color: #0563bb;
   width: auto;
   border-radius: 28px;
+  color: white;
+}
+
+.nav-item.active .nav-content {
+  background-color: #0563bb;
+  border-radius: 28px;
+  color: white;
 }
 
 .nav-item:hover .nav-title {
   display: block;
+  color: white;
 }
 </style>
+

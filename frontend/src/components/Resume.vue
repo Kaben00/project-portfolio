@@ -30,7 +30,7 @@
             </div>
             <div class="col-item-6">
               <h3 class="h3-title">Professional Experience</h3>
-              <v-expansion-panels>
+              <v-expansion-panels v-model="panel">
                 <v-expansion-panel
                   v-for="(workItem, index) in workExperienceItems" :key="index"
                 >
@@ -62,6 +62,7 @@
 <script>
 export default {
   data: () => ({
+    panel: [0],
     workExperienceItems: [{
       id: '1',
       jobName: 'WordPress Developer',

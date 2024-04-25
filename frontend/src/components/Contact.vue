@@ -4,6 +4,12 @@
       <v-col cols="12" md="8">
         <div class="about-us-description">
           <div class="section-h2-title">CONTACT</div>
+          <div>
+            <div class="col-item-6">
+              <contact-us-details/>
+            </div>
+            <div class="col-item-6"></div>
+          </div>
         </div>
       </v-col>
     </v-row>
@@ -11,7 +17,9 @@
 </template>
 
 <script>
+import ContactUsDetails from './ContactUsComponents/ContactUsDetails.vue';
 export default {
+  components: { ContactUsDetails },
   data: () => ({
   }),
 
