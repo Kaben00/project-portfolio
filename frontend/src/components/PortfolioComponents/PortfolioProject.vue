@@ -154,7 +154,7 @@
         },
         { 
           id: 3, 
-          title: 'YYC Advisors', 
+          title: '<a href="https://www.yycadvisors.com/" target="_blank">YYC Advisors</a>', 
           description: 'In Charge of YYC Advisors Project', 
           imageUrl: '/src/assets/images/yyc-advisors-homepage-portfolio.webp', 
           category: 'SiteSell',
@@ -171,6 +171,13 @@
               date: '2024-04-24',            
               tasks: [
                 'Redesigned Articles page, <a href="https://www.yycadvisors.com/accounting-new-design.html" target="_blank">link</a>',
+              ],
+            },
+            {
+              date: '2024-04-26',            
+              tasks: [
+                'Provides Generative Artificial Intelligent (GAI) Prompt Training',
+                'Integrated Google Tag Manager and Google Search Console Code Snippets into the website' 
               ],
             },
           ]
