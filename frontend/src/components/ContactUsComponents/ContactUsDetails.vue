@@ -47,4 +47,8 @@
   .contact-h4 {
     margin-bottom: 10px;
   }
+
+  .v-list {
+    background: rgb(255 255 255) !important;
+  }
 </style>

@@ -154,7 +154,7 @@
         },
         { 
           id: 3, 
-          title: '<a href="https://www.yycadvisors.com/" target="_blank">YYC Advisors</a>', 
+          title: 'YYC Advisors', 
           description: 'In Charge of YYC Advisors Project', 
           imageUrl: '/src/assets/images/yyc-advisors-homepage-portfolio.webp', 
           category: 'SiteSell',
