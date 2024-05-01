@@ -84,8 +84,9 @@ export default {
       companyName: 'Accenture',
       yearOfService: '2019-2023',
       jobDescription: [
-        'Task 1', 
-        'Task 2'
+        'Collaborated with clients to publish key informational articles on internal websites, enhancing corporate knowledge sharing.', 
+        'Developed and deployed client-approved articles using HTML5 and CSS, significantly improving the accessibility and design of internal webpages.',
+        'Revamped the training process for new joiners, leading to a 30% increase in onboarding efficiency and a 20% improvement in learning outcomes.',
       ],
     },
     {
@@ -94,8 +95,9 @@ export default {
       companyName: '8verstudio',
       yearOfService: '2017-2017',
       jobDescription: [
-        'Task 1', 
-        'Task 2'
+        'Managed and facilitated communication between clients and the internal team to deliver 22 client-centric websites, ensuring project alignment with client vision.', 
+        'Conducted debugging and resolved security vulnerabilities across 22 projects, enhancing website performance and safeguarding against potential threats.',
+        'Added client-requested content to websites, ensuring accuracy and relevance. Monitored servers for bugs, performing minor debugging to maintain optimal site performance and security.'
       ],
     },
   ]

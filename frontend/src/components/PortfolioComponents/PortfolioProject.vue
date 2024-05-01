@@ -27,7 +27,7 @@
                 >
                   <div class="hover-details">
                     <v-card-title>{{ item.title }}</v-card-title>
-                    <v-card-text>{{ item.description }}</v-card-text>
+                    <v-card-text v-html="item.description"></v-card-text>
                     <div class="view-more-icon">
                       <v-icon large color="black" :href="`#details-${item.id}`" class="d-flex align-center justify-center">mdi-magnify</v-icon>
                     </div>
@@ -60,7 +60,7 @@
         { 
           id: 1, 
           title: 'TaxPOD Website', 
-          description: 'Revamp TaxPOD Website', 
+          description: 'Revamp <a href="https://taxpod.com.my" target="_blank">TaxPOD Website</a>', 
           imageUrl: '/src/assets/images/taxpod-homepage-portfolio.webp', 
           category: 'WordPress',
           details: [
@@ -100,7 +100,7 @@
         { 
           id: 2, 
           title: 'YYC & Co Website', 
-          description: 'Revamp YYC & Co Website', 
+          description: 'Revamp <a href="https://yyc.asia" target="_blank">YYC & Co Website</a>', 
           imageUrl: '/src/assets/images/yyc-co-homepage-portfolio.webp', 
           category: 'WordPress',
           details: [
@@ -155,7 +155,7 @@
         { 
           id: 3, 
           title: 'YYC Advisors', 
-          description: 'In Charge of YYC Advisors Project', 
+          description: 'In Charge of <a href="https://www.yycadvisors.com" target="_blank">YYC Advisors Project</a>', 
           imageUrl: '/src/assets/images/yyc-advisors-homepage-portfolio.webp', 
           category: 'SiteSell',
           details: [
