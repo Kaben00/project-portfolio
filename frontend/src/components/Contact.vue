@@ -3,7 +3,8 @@
     <v-row justify="center">
       <v-col cols="12" md="8">
         <div class="about-us-description">
-          <div class="section-h2-title">CONTACT</div>
+          <!-- TODO: MAKE REFERENCE ON LATER DATE -->
+          <div class="section-h2-title">REFERENCE</div>
           <div>
             <div class="col-item-6">
               <contact-us-details/>

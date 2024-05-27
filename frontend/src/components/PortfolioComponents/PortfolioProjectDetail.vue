@@ -10,6 +10,7 @@
       <div class="text-content">
         <v-card-title>{{ detail.title }}</v-card-title>
         <v-card-text v-html="detail.description"></v-card-text>
+        <v-card-text v-html="detail.techStack"></v-card-text>
         <div class="detailed-date-tasks" v-for="(detailEntry, index) in detail.details" :key="index">
           <h3>Date: {{ detailEntry.date }}</h3>
           <ul>

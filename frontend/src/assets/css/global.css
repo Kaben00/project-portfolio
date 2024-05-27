@@ -83,3 +83,69 @@
     bottom: 0;
     left: calc(50% - 20px);
   }
+
+  @media only screen and (max-width: 600px) {
+    /* GENERAL */
+    p {
+      margin-bottom: 14px;
+      font-size: 14px;
+    }
+
+    .v-navigation-drawer {
+      display: none;
+    }
+
+    .about-me-section, 
+    .resume-section,
+    .portfolio-section,
+    .contact-section,
+    .footer-section {
+      height: fit-content !important;
+    }
+
+    /* HOME SECTION */
+    .homepage {
+      margin: auto;
+    }
+
+    .text-h1 {
+      font-size: 56px !important;
+    }
+
+    .main-text {
+      font-size: 20px !important;
+    }
+
+    /* ABOUT ME SECTION */
+    .about-us-image-container {
+      margin-bottom: 40px;
+    }
+
+    .row, .about-us-description, .detailed-section {
+      flex-direction: column;
+      margin-right: 0px;
+      margin-left: 0px;
+    }
+
+    .v-img__img {
+      position: relative;
+    }
+
+    .v-application__wrap {
+      max-width: none;
+    }
+
+    .col-item-6 {
+      max-width: none;
+      margin: 10px auto;
+    }
+
+    /* PORTFOLIO SECTION */
+    .portfolio-section .v-responsive__sizer, .image-container {
+      flex: none;
+    }
+
+    .v-img {
+      height: auto !important;
+    }
+  }

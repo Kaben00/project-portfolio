@@ -13,10 +13,8 @@
     <section class="portfolio-section" id="portfolio">
       <portfolio/>
     </section >
-    <section class="contact-section" id="contact">
-      <contact/>
-    </section >
-    <section>
+    <!-- TODO: MAKE REFERENCE ON LATER DATE -->
+    <section class="footer-section" id="footer">
       <Footer/>
     </section>
 
@@ -35,8 +33,13 @@
   height: 100vh;
 }
 
-.about-me-section, .resume-section, .portfolio-section, .contact-section {
+.about-me-section, .resume-section, .portfolio-section  {
   height: 100vh;
   background-color: white;
+}
+
+.footer-section {
+  height: 20vh;
+  background-color: #f7f8f9;
 }
 </style>

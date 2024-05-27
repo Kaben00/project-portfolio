@@ -1,6 +1,7 @@
 <template>
  <v-navigation-drawer app permanent class="nav-menu">
     <v-list dense>
+      <!-- TODO: ADD MOBILE RESPONSIVE MENU -->
       <v-list-item 
         v-for="item in menuItems"
         :key="item.id"
@@ -25,7 +26,8 @@ export default {
     { id: 'about', title: 'About', icon: 'mdi-account' },
     { id: 'resume', title: 'Resume', icon: 'mdi-briefcase' },
     { id: 'portfolio', title: 'Portfolio', icon: 'mdi-image' },
-    { id: 'contact', title: 'Contact', icon: 'mdi-email' }
+    // TODO: MAKE REFERENCE ON LATER DATE
+    // { id: 'contact', title: 'Contact', icon: 'mdi-email' }
   ],
   }),
 

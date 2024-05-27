@@ -61,7 +61,8 @@
           id: 1, 
           title: 'TaxPOD Website', 
           description: 'Revamp <a href="https://taxpod.com.my" target="_blank">TaxPOD Website</a>', 
-          imageUrl: '/src/assets/images/taxpod-homepage-portfolio.webp', 
+          imageUrl: '/src/assets/images/taxpod-homepage-portfolio.webp',
+          techStack: 'HTML, CSS, Javascript, PHP',
           category: 'WordPress',
           details: [
             {
@@ -101,7 +102,8 @@
           id: 2, 
           title: 'YYC & Co Website', 
           description: 'Revamp <a href="https://yyc.asia" target="_blank">YYC & Co Website</a>', 
-          imageUrl: '/src/assets/images/yyc-co-homepage-portfolio.webp', 
+          imageUrl: '/src/assets/images/yyc-co-homepage-portfolio.webp',
+          techStack: 'HTML, CSS, Javascript, PHP',
           category: 'WordPress',
           details: [
             {
@@ -156,7 +158,8 @@
           id: 3, 
           title: 'YYC Advisors', 
           description: 'In Charge of <a href="https://www.yycadvisors.com" target="_blank">YYC Advisors Project</a>', 
-          imageUrl: '/src/assets/images/yyc-advisors-homepage-portfolio.webp', 
+          imageUrl: '/src/assets/images/yyc-advisors-homepage-portfolio.webp',
+          techStack: 'HTML, CSS, Javascript',
           category: 'SiteSell',
           details: [
             {
@@ -187,6 +190,7 @@
           title: 'Portfolio Website', 
           description: 'Create a Website to Combine All Protfolio', 
           imageUrl: '/src/assets/images/portfolio-page.webp', 
+          techStack: 'HTML, CSS, Vue.js',
           category: 'Vue',
           details: [
             {
