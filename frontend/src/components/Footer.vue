@@ -5,7 +5,7 @@
       <div
         class="footer-caption"
       >
-      {{ (new Date()).getFullYear() }} - <span class="d-none d-sm-inline-block">A Website by Kah Beng</span>
+      {{ (new Date()).getFullYear() }} - <span class="d-sm-inline-block">A Website by Kah Beng</span>
       </div>
       <!-- TODO: ADD SOCIAL MEDIA LINK AND ICON -->
       <!-- <a

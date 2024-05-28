@@ -11,12 +11,14 @@
         <v-card-title>{{ detail.title }}</v-card-title>
         <v-card-text v-html="detail.description"></v-card-text>
         <v-card-text v-html="detail.techStack"></v-card-text>
-        <div class="detailed-date-tasks" v-for="(detailEntry, index) in detail.details" :key="index">
+        <div class="text-content-details">
+          <div class="detailed-date-tasks" v-for="(detailEntry, index) in detail.details" :key="index">
           <h3>Date: {{ detailEntry.date }}</h3>
           <ul>
             <li v-for="(task, taskIndex) in detailEntry.tasks" :key="taskIndex" v-html="task">
             </li>
           </ul>
+        </div>
         </div>
       </div>
     </div>
@@ -57,9 +59,13 @@
 
     .text-content {
       flex: 1;
-      overflow-x: auto;
-      white-space: nowrap;
+      white-space: wrap;
       padding: 20px;
+    }
+
+    .text-content-details {
+      scroll-behavior: smooth;
+      overflow-y: auto;
     }
 
     .v-card {

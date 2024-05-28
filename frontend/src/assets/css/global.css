@@ -127,8 +127,9 @@
       margin-left: 0px;
     }
 
-    .v-img__img {
-      position: relative;
+    .about-us-image-container .v-img__img {
+      position: absolute;
+      width: 300px;
     }
 
     .v-application__wrap {
@@ -141,11 +142,21 @@
     }
 
     /* PORTFOLIO SECTION */
-    .portfolio-section .v-responsive__sizer, .image-container {
+    .portfolio-section .v-responsive__sizer, .image-container, .detailed-section .image-container {
       flex: none;
     }
 
-    .v-img {
+    .detailed-section .v-img {
       height: auto !important;
+      width: 350px !important;
+    }
+
+    .text-content {
+      white-space: normal;
+    }
+    
+    /* FOOTER SECTION */
+    .footer-section {
+      height: 10vh !important;
     }
   }
