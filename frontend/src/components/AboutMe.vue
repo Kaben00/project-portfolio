@@ -32,13 +32,14 @@
 </template>
 
 <script>
+import aboutUsImageUrl from '@/assets/images/about-us-image.webp'
 export default {
   data: () => ({
     descriptions: [],
     aboutUsItems: [
       {
         id: 1,
-        aboutUsImageUrl: '/src/assets/images/about-us-image.webp',
+        aboutUsImageUrl,
         aboutUsJobTitle: 'Frontend and WordPress Developer',
         aboutUsDetails: {
           'Email' : 'kahbengl@hotmail.com',
