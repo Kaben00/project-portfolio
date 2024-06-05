@@ -55,7 +55,7 @@
     flex-direction: column;
   }
 
-  .footer-caption {
-    align-items: end;
+  .footer-items .h3-title {
+    margin-top: 0;
   }
 </style>

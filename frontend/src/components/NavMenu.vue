@@ -59,7 +59,7 @@ export default {
     },
     
     handleScroll() {
-      const sections = ['home', 'about', 'resume', 'portfolio', 'contact'];
+      const sections = ['home', 'about', 'resume', 'portfolio'];
       const offsets = sections.map(id => {
         const el = document.getElementById(id);
         return el ? el.getBoundingClientRect().top + window.scrollY : null;

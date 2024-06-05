@@ -64,7 +64,7 @@
         { 
           id: 1, 
           title: 'TaxPOD Website', 
-          description: 'Revamp <a href="https://taxpod.com.my" target="_blank">TaxPOD Website</a>', 
+          description: 'Revamp&nbsp<a href="https://taxpod.com.my" target="_blank">TaxPOD Website</a>', 
           imageUrl: taxpodImage,
           techStack: 'HTML, CSS, Javascript, PHP',
           category: 'WordPress',
@@ -105,7 +105,7 @@
         { 
           id: 2, 
           title: 'YYC & Co Website', 
-          description: 'Revamp <a href="https://yyc.asia" target="_blank">YYC & Co Website</a>', 
+          description: 'Revamp &nbsp<a href="https://yyc.asia" target="_blank">YYC & Co Website</a>', 
           imageUrl: yycImage,
           techStack: 'HTML, CSS, Javascript, PHP',
           category: 'WordPress',
@@ -161,7 +161,7 @@
         { 
           id: 3, 
           title: 'YYC Advisors', 
-          description: 'In Charge of <a href="https://www.yycadvisors.com" target="_blank">YYC Advisors Project</a>', 
+          description: 'In Charge of&nbsp<a href="https://www.yycadvisors.com" target="_blank">YYC Advisors Project</a>', 
           imageUrl: yycAdvisorsImage,
           techStack: 'HTML, CSS, Javascript',
           category: 'SiteSell',
@@ -217,6 +217,12 @@
               tasks: [
                 'Futhur Enhance Portfolio section.',
                 'Fill in the tasks and date.',
+              ],
+            },
+            {
+              date: '2024-05-05',            
+              tasks: [
+                'Enhances Overall Website for Mobile Responsiveness',
               ],
             },
           ]

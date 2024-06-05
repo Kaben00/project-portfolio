@@ -9,6 +9,15 @@
     font-size: 18px;
     font-weight: 600;
   }
+
+  a {
+    text-decoration: none;
+    color: black;
+  }
+
+  a:hover {
+    color: blue;
+  }
   
   .v-navigation-drawer__content {
     display: flex;
@@ -84,15 +93,11 @@
     left: calc(50% - 20px);
   }
 
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 1366px) {
     /* GENERAL */
     p {
       margin-bottom: 14px;
-      font-size: 14px;
-    }
-
-    .v-navigation-drawer {
-      display: none;
+      font-size: 16px;
     }
 
     .about-me-section, 
@@ -122,6 +127,92 @@
     }
 
     .row, .about-us-description, .detailed-section {
+      flex-direction: row;
+      margin-right: 0px;
+      margin-left: 0px;
+    }
+
+    .v-img__img--contain {
+      object-fit: cover;
+    }
+
+    .v-application__wrap {
+      max-width: none;
+    }
+
+    .col-item-6 {
+      max-width: none;
+      margin: 10px auto;
+      padding: 0 10px;
+    }
+
+    /* PORTFOLIO SECTION */
+    .portfolio-section .v-responsive__sizer, .image-container, .detailed-section .image-container {
+      flex: none;
+    }
+
+    .about-us-description .v-responsive__sizer ~ .v-responsive__content {
+      margin-inline-start: auto;
+    }
+
+    .detailed-section .v-img {
+      height: auto !important;
+      width: 350px !important;
+    }
+
+    .v-card-text {
+      padding-left: 5px;
+      padding-right: 5px; 
+    }
+
+    .text-content {
+      white-space: normal;
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    /* GENERAL */
+    p {
+      margin-bottom: 14px;
+      font-size: 14px;
+    }
+
+    .v-navigation-drawer {
+      display: none;
+    }
+
+    .about-me-section, 
+    .resume-section,
+    .portfolio-section,
+    .contact-section,
+    .footer-section {
+      height: fit-content !important;
+    }
+
+    /* HOME SECTION */
+    .homepage {
+      margin: auto;
+    }
+
+    .home-section .v-responsive {
+      display: block;
+      margin-left: 30px !important;
+    }
+
+    .text-h1 {
+      font-size: 56px !important;
+    }
+
+    .main-text {
+      font-size: 20px !important;
+    }
+
+    /* ABOUT ME SECTION */
+    .about-us-image-container {
+      margin-bottom: 40px;
+    }
+
+    .row, .about-us-description, .detailed-section {
       flex-direction: column;
       margin-right: 0px;
       margin-left: 0px;
@@ -129,7 +220,6 @@
 
     .about-us-image-container .v-img__img {
       position: absolute;
-      width: 300px;
     }
 
     .v-application__wrap {
@@ -153,10 +243,5 @@
 
     .text-content {
       white-space: normal;
-    }
-    
-    /* FOOTER SECTION */
-    .footer-section {
-      height: 10vh !important;
     }
   }

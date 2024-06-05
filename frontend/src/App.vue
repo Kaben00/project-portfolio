@@ -33,13 +33,17 @@
   height: 100vh;
 }
 
-.about-me-section, .resume-section, .portfolio-section  {
+.about-me-section  {
   height: 100vh;
   background-color: white;
 }
 
+.portfolio-section, .resume-section {
+  height: fit-content;
+  background-color: white;
+}
+
 .footer-section {
-  height: 20vh;
   background-color: #f7f8f9;
 }
 </style>
