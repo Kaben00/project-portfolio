@@ -1,6 +1,8 @@
 <template>
-  <v-container>
-    <div v-if="!showDetail">
+  <v-container class="portfolio-content">
+    <div 
+    v-if="!showDetail"
+    >
       <v-tabs v-model="selectedCategory" background-color="transparent" class="portolio-tab">
         <v-tab v-for="category in categories" :key="category" :value="category">
           {{ category }}
@@ -321,5 +323,9 @@
 
     .portolio-tab {
       margin-bottom: 30px;
+    }
+
+    .portfolio-content {
+      height: 730px;
     }
 </style>

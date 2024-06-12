@@ -168,6 +168,17 @@
     .text-content {
       white-space: normal;
     }
+
+    .portfolio-content {
+      height: 600px !important;
+    }
+    .detailed-section {
+      height: 600px !important;
+    }
+
+    .text-content-details {
+      max-height: 360px !important;
+    }
   }
 
   @media only screen and (max-width: 600px) {
@@ -238,5 +249,9 @@
 
     .text-content {
       white-space: normal;
+    }
+
+    .portfolio-content {
+      height: auto !important;
     }
   }

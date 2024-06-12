@@ -50,6 +50,7 @@
     .detailed-section {
       display: flex;
       align-items: flex-start;
+      height: 730px;
     }
 
     .image-container {
