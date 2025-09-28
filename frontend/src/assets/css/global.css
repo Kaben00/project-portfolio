@@ -1,0 +1,257 @@
+/*CSS Styles for Global*/
+  p {
+    margin-bottom: 16px;
+    font-family: "Open Sans", sans-serif;
+  }
+  
+  h4 {
+    line-height: 18px;
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  a {
+    text-decoration: none;
+    color: black;
+  }
+
+  a:hover {
+    color: blue;
+  }
+  
+  .v-navigation-drawer__content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .section-title, .section-description {
+    text-align: center;
+    padding-bottom: 30px;
+  }
+
+  .homepage {
+    margin-left: 100px;
+  }
+
+  .v-slide-group__content {
+    justify-content: center;
+  }
+
+  .col-item-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  .row {
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+  }
+
+  .h3-title {
+    font-size: 26px;
+    font-weight: 700;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-top: 40px;
+    color: #45505b;
+  }
+
+  .section-h2-title {
+    font-size: 32px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+    padding-bottom: 20px;
+    position: relative;
+    color: #45505b;
+    text-align: center;
+  }
+
+  .section-h2-title:before {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 120px;
+    height: 1px;
+    background: #ddd;
+    bottom: 1px;
+    left: calc(50% - 60px);
+  }
+
+  .section-h2-title::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: #0563bb;
+    bottom: 0;
+    left: calc(50% - 20px);
+  }
+
+  @media only screen and (max-width: 1366px) {
+    /* GENERAL */
+    p {
+      margin-bottom: 14px;
+      font-size: 16px;
+    }
+
+    .about-me-section, 
+    .resume-section,
+    .portfolio-section,
+    .contact-section,
+    .footer-section {
+      height: fit-content !important;
+    }
+
+    /* HOME SECTION */
+    .homepage {
+      margin: auto;
+    }
+
+    .text-h1 {
+      font-size: 56px !important;
+    }
+
+    .main-text {
+      font-size: 20px !important;
+    }
+
+    /* ABOUT ME SECTION */
+    .about-us-image-container {
+      margin-bottom: 40px;
+    }
+
+    .row, .about-us-description, .detailed-section {
+      flex-direction: row;
+      margin-right: 0px;
+      margin-left: 0px;
+    }
+
+    .v-img__img--contain {
+      object-fit: cover;
+    }
+
+    .v-application__wrap {
+      max-width: none;
+    }
+
+    .col-item-6 {
+      max-width: none;
+      margin: 10px auto;
+      padding: 0 10px;
+    }
+
+    /* PORTFOLIO SECTION */
+    .portfolio-section .v-responsive__sizer, .image-container, .detailed-section .image-container {
+      flex: none;
+    }
+
+    .about-us-description .v-responsive__sizer ~ .v-responsive__content {
+      margin-inline-start: auto;
+    }
+
+    .detailed-section .v-img {
+      height: auto !important;
+      width: 350px !important;
+    }
+
+    .v-card-text {
+      padding-left: 5px;
+      padding-right: 5px; 
+    }
+
+    .text-content {
+      white-space: normal;
+    }
+
+    .portfolio-content {
+      height: 600px !important;
+    }
+    .detailed-section {
+      height: 600px !important;
+    }
+
+    .text-content-details {
+      max-height: 360px !important;
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    /* GENERAL */
+    p {
+      margin-bottom: 14px;
+      font-size: 14px;
+    }
+
+    .v-navigation-drawer {
+      display: none;
+    }
+
+    .about-me-section, 
+    .resume-section,
+    .portfolio-section,
+    .contact-section,
+    .footer-section {
+      height: fit-content !important;
+    }
+
+    /* HOME SECTION */
+    .homepage {
+      margin: auto;
+    }
+
+    .text-h1 {
+      font-size: 56px !important;
+    }
+
+    .main-text {
+      font-size: 20px !important;
+    }
+
+    /* ABOUT ME SECTION */
+    .about-us-image-container {
+      margin-bottom: 40px;
+    }
+
+    .row, .about-us-description, .detailed-section {
+      flex-direction: column;
+      margin-right: 0px;
+      margin-left: 0px;
+    }
+
+    .about-us-image-container .v-img__img {
+      position: absolute;
+    }
+
+    .v-application__wrap {
+      max-width: none;
+    }
+
+    .col-item-6 {
+      max-width: none;
+      margin: 10px auto;
+    }
+
+    /* PORTFOLIO SECTION */
+    .portfolio-section .v-responsive__sizer, .image-container, .detailed-section .image-container {
+      flex: none;
+    }
+
+    .detailed-section .v-img {
+      height: auto !important;
+      width: 350px !important;
+    }
+
+    .text-content {
+      white-space: normal;
+    }
+
+    .portfolio-content {
+      height: auto !important;
+    }
+  }
